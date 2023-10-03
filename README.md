@@ -7,6 +7,12 @@ _Berkeley AI Research_
 [Project Page](https://sites.google.com/view/drive-any-robot) | [arXiV](https://arxiv.org/abs/2210.03370) | [Summary Video](https://www.youtube.com/watch?v=ICeD6iOglKc)
 
 ---
+## Notes (GoAnywhere object navigation)
+
+- Follow installation instructions for the original repository (given below). In addition, install `opencv-python` for visualisation and GUI support.
+- Running a demo to test the GNM controller: start both `image_demo.py` and `pd_controller.py`. Starting `image_demo.py` should open a window visualising the RGB images received from IMAGE_TOPIC (can be changed in the code). You may select image crops by clicking and dragging directly on the window. The controller takes in these image crops as goals and generates normalised waypoints to drive toward them. The waypoints are received by the `pd_controller.py` node which converts them into linear/angular velocities to command the robot on the `cmd_vel` topic.
+- [TODO] Navigation with image crop subgoals is done by `image_nav.py`. Work in progress.
+---
 ## Overview
 This repository contains code for training a GNM with your own data, pre-trained model checkpoints, as well as example code to deploy it on a TurtleBot2/LoCoBot robot.
 
